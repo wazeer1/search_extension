@@ -49,3 +49,26 @@ function updateIcon(tabId) {
 
 
 
+function performSearch(query) {
+    // Perform search using Google APIs
+    // Store results in browser storage
+  }
+  
+  chrome.runtime.onInstalled.addListener(function() {
+    chrome.contextMenus.create({
+      id: "searchMenu",
+      title: "Search Gavaria",
+      contexts: ["selection"],
+      onclick: function(info) {
+        var query = info.selectionText;
+        performSearch(query);
+      }
+    });
+  });
+  
+  chrome.browserAction.onClicked.addListener(function(tab) {
+    chrome.tabs.create({
+      url: chrome.extension.getURL("search.html")
+      
+    });
+  });

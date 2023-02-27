@@ -4,11 +4,14 @@
     "description": "get audio results",
     "version": "2.2.0",
     "author": "@shevabam",
-    "homepage_url": "https://github.com/shevabam/get-rss-feed-url-extension",
+    "homepage_url": "https://github.com/wazeer1/search_extension.git",
     "permissions": [
         "scripting",
         "activeTab",
-        "notifications"
+        "notifications",
+        "storage", 
+        "tabs", 
+        "https://www.googleapis.com/"
     ],
     "host_permissions": [
         "http://*/*",
